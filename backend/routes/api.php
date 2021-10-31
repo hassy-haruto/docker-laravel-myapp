@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/employee/role', 'App\Http\Controllers\API\EmployeeController@role');
+Route::get('/employee', 'App\Http\Controllers\EmployeeController@index');
+Route::get('/employee/index', 'App\Http\Controllers\EmployeeController@index');
+Route::get('/employee/list', 'App\Http\Controllers\EmployeeController@index');
+Route::get('/employee/form', 'App\Http\Controllers\EmployeeController@index');
+Route::get('/employee/edit/{num}', 'App\Http\Controllers\EmployeeController@index');
