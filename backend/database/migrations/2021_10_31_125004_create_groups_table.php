@@ -15,11 +15,11 @@ class CreateGroupsTable extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedBigInteger('group_id');
+            $table->unsignedBigInteger('blog_id');
             $table->string('name', 25);
             $table->string('picture')->nullable();
             $table->integer('amount')->nullable();
-            $table->text('content',560)->nullable(); 
+            $table->text('content', 1020)->nullable(); 
             $table->string('password', 20);
             $table->timestamps();
         });

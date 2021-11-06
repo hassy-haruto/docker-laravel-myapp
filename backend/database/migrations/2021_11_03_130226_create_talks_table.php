@@ -15,9 +15,12 @@ class CreateTalksTable extends Migration
     {
         Schema::create('talks', function (Blueprint $table) {
             $table->id();
-            $table->user_id();
-            $table->group_id();
-            $table->content();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('group_id');
+            $table->string('picture');
+            $table->text('content', 634);
+            $table->string('password');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
